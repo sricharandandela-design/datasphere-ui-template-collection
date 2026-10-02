@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KPI Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            KPI<span>Pro</span>
+        </div>
+
+        <nav>
+            <a href="#" class="active">📊 Dashboard</a>
+            <a href="#">📈 Performance</a>
+            <a href="#">🎯 Targets</a>
+            <a href="#">📋 Reports</a>
+            <a href="#">⚙️ Settings</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+                <h1>KPI Dashboard</h1>
+                <p>Monitor your key performance indicators</p>
+            </div>
+
+            <button class="date-btn">
+                Last 30 Days ▾
+            </button>
+
+        </header>
+
+
+        <!-- KPI CARDS -->
+        <section class="kpi-grid">
+
+            <div class="kpi-card">
+                <div class="kpi-icon">💰</div>
+                <p>Total Revenue</p>
+                <h2>$84,250</h2>
+                <span class="positive">↑ 12.5% vs last month</span>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-icon">👥</div>
+                <p>Total Users</p>
+                <h2>24,580</h2>
+                <span class="positive">↑ 8.2% vs last month</span>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-icon">🛒</div>
+                <p>Total Orders</p>
+                <h2>8,642</h2>
+                <span class="positive">↑ 15.8% vs last month</span>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-icon">🎯</div>
+                <p>Conversion Rate</p>
+                <h2>6.84%</h2>
+                <span class="positive">↑ 2.4% vs last month</span>
+            </div>
+
+        </section>
+
+
+        <!-- PERFORMANCE SECTION -->
+        <section class="performance-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>KPI Performance</h2>
+                    <p>Track your most important business metrics</p>
+                </div>
+            </div>
+
+            <div class="performance-grid">
+
+                <div class="performance-card">
+
+                    <div class="performance-top">
+                        <span>Revenue Target</span>
+                        <strong>84%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar revenue"></div>
+                    </div>
+
+                    <p>$84,250 / $100,000</p>
+
+                </div>
+
+
+                <div class="performance-card">
+
+                    <div class="performance-top">
+                        <span>User Growth</span>
+                        <strong>72%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar users"></div>
+                    </div>
+
+                    <p>24,580 / 34,000 users</p>
+
+                </div>
+
+
+                <div class="performance-card">
+
+                    <div class="performance-top">
+                        <span>Order Target</span>
+                        <strong>86%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar orders"></div>
+                    </div>
+
+                    <p>8,642 / 10,000 orders</p>
+
+                </div>
+
+
+                <div class="performance-card">
+
+                    <div class="performance-top">
+                        <span>Conversion Goal</span>
+                        <strong>68%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar conversion"></div>
+                    </div>
+
+                    <p>6.84% / 10% target</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHARTS -->
+        <section class="charts-grid">
+
+            <div class="chart-card">
+
+                <div class="chart-header">
+                    <div>
+                        <h2>Revenue Trend</h2>
+                        <p>Monthly revenue performance</p>
+                    </div>
+                </div>
+
+                <canvas id="revenueChart"></canvas>
+
+            </div>
+
+
+            <div class="chart-card">
+
+                <div class="chart-header">
+                    <div>
+                        <h2>KPI Overview</h2>
+                        <p>Current performance by category</p>
+                    </div>
+                </div>
+
+                <canvas id="kpiChart"></canvas>
+
+            </div>
+
+        </section>
+
+
+        <!-- INSIGHTS -->
+        <section class="insights">
+
+            <h2>Performance Insights</h2>
+
+            <div class="insight-grid">
+
+                <div class="insight-card">
+                    <span>🚀</span>
+                    <div>
+                        <h3>Revenue is growing</h3>
+                        <p>Revenue increased by 12.5% compared with the previous month.</p>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <span>🎯</span>
+                    <div>
+                        <h3>Target progress</h3>
+                        <p>You have achieved 84% of your monthly revenue target.</p>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <span>📈</span>
+                    <div>
+                        <h3>Strong user growth</h3>
+                        <p>User activity continues to increase across the platform.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
