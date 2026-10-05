@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Reports & Export</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">Report<span>Pro</span></div>
+
+        <nav>
+            <a href="#">📊 Dashboard</a>
+            <a href="#" class="active">📄 Reports</a>
+            <a href="#">📈 Analytics</a>
+            <a href="#">📁 Exports</a>
+            <a href="#">⚙️ Settings</a>
+        </nav>
+
+        <div class="profile">
+            <div class="avatar">SC</div>
+            <div>
+                <strong>Analytics Team</strong>
+                <small>Admin</small>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div>
+                <h1>Analytics Reports</h1>
+                <p>Create, manage and export your analytics reports</p>
+            </div>
+
+            <button class="primary-btn" id="createBtn">
+                + Create Report
+            </button>
+        </header>
+
+        <!-- SUMMARY -->
+
+        <section class="summary-grid">
+
+            <div class="summary-card">
+                <div class="summary-icon">📄</div>
+                <div>
+                    <span>Total Reports</span>
+                    <h2>128</h2>
+                    <small class="positive">↑ 12% this month</small>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">📤</div>
+                <div>
+                    <span>Exports</span>
+                    <h2>842</h2>
+                    <small class="positive">↑ 18% this month</small>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">⏱️</div>
+                <div>
+                    <span>Scheduled Reports</span>
+                    <h2>24</h2>
+                    <small>Active schedules</small>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">👥</div>
+                <div>
+                    <span>Shared Reports</span>
+                    <h2>56</h2>
+                    <small class="positive">↑ 8% this month</small>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- FILTERS -->
+
+        <section class="filter-panel">
+
+            <div class="filter-title">
+                <div>
+                    <h3>Report Library</h3>
+                    <p>Manage and export your analytics reports</p>
+                </div>
+
+                <div class="filters">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="🔍 Search reports..."
+                    >
+
+                    <select id="typeFilter">
+                        <option value="all">All Types</option>
+                        <option value="sales">Sales</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="users">User Analytics</option>
+                        <option value="financial">Financial</option>
+                    </select>
+
+                    <select id="statusFilter">
+                        <option value="all">All Status</option>
+                        <option value="ready">Ready</option>
+                        <option value="scheduled">Scheduled</option>
+                    </select>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- REPORT TABLE -->
+
+        <section class="report-card">
+
+            <div class="table-header">
+                <h3>Recent Reports</h3>
+
+                <button class="export-btn" id="exportAll">
+                    ↓ Export All
+                </button>
+            </div>
+
+            <div class="table-wrapper">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Report Name</th>
+                            <th>Type</th>
+                            <th>Created By</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Format</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="reportTable">
+
+                        <tr data-type="sales" data-status="ready">
+                            <td>
+                                <div class="report-name">
+                                    <div class="file-icon">📊</div>
+                                    <div>
+                                        <strong>Monthly Sales Report</strong>
+                                        <small>Sales performance overview</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Sales</td>
+                            <td>Admin</td>
+                            <td>30 Sep 2026</td>
+                            <td>
+                                <span class="status ready">Ready</span>
+                            </td>
+                            <td>
+                                <span class="format">PDF</span>
+                            </td>
+                            <td>
+                                <button class="download-btn">↓</button>
+                            </td>
+                        </tr>
+
+                        <tr data-type="marketing" data-status="ready">
+                            <td>
+                                <div class="report-name">
+                                    <div class="file-icon">📈</div>
+                                    <div>
+                                        <strong>Marketing Performance</strong>
+                                        <small>Campaign performance analysis</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Marketing</td>
+                            <td>Analytics Team</td>
+                            <td>28 Sep 2026</td>
+                            <td>
+                                <span class="status ready">Ready</span>
+                            </td>
+                            <td>
+                                <span class="format csv">CSV</span>
+                            </td>
+                            <td>
+                                <button class="download-btn">↓</button>
+                            </td>
+                        </tr>
+
+                        <tr data-type="users" data-status="scheduled">
+                            <td>
+                                <div class="report-name">
+                                    <div class="file-icon">👥</div>
+                                    <div>
+                                        <strong>User Engagement Report</strong>
+                                        <small>User activity and engagement</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>User Analytics</td>
+                            <td>Admin</td>
+                            <td>26 Sep 2026</td>
+                            <td>
+                                <span class="status scheduled">Scheduled</span>
+                            </td>
+                            <td>
+                                <span class="format excel">XLSX</span>
+                            </td>
+                            <td>
+                                <button class="download-btn">↓</button>
+                            </td>
+                        </tr>
+
+                        <tr data-type="financial" data-status="ready">
+                            <td>
+                                <div class="report-name">
+                                    <div class="file-icon">💰</div>
+                                    <div>
+                                        <strong>Financial Summary</strong>
+                                        <small>Revenue and expense analysis</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Financial</td>
+                            <td>Finance Team</td>
+                            <td>24 Sep 2026</td>
+                            <td>
+                                <span class="status ready">Ready</span>
+                            </td>
+                            <td>
+                                <span class="format">PDF</span>
+                            </td>
+                            <td>
+                                <button class="download-btn">↓</button>
+                            </td>
+                        </tr>
+
+                        <tr data-type="sales" data-status="ready">
+                            <td>
+                                <div class="report-name">
+                                    <div class="file-icon">🛒</div>
+                                    <div>
+                                        <strong>Product Sales Analysis</strong>
+                                        <small>Product-wise sales performance</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Sales</td>
+                            <td>Admin</td>
+                            <td>21 Sep 2026</td>
+                            <td>
+                                <span class="status ready">Ready</span>
+                            </td>
+                            <td>
+                                <span class="format csv">CSV</span>
+                            </td>
+                            <td>
+                                <button class="download-btn">↓</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- EXPORT OPTIONS -->
+
+        <section class="export-grid">
+
+            <div class="export-card">
+                <div class="export-icon">📄</div>
+                <div>
+                    <h3>PDF Reports</h3>
+                    <p>Download formatted reports for presentations and sharing.</p>
+                </div>
+                <button class="small-btn" data-format="PDF">Export PDF</button>
+            </div>
+
+            <div class="export-card">
+                <div class="export-icon">📊</div>
+                <div>
+                    <h3>CSV Data</h3>
+                    <p>Export raw analytics data for further analysis.</p>
+                </div>
+                <button class="small-btn" data-format="CSV">Export CSV</button>
+            </div>
+
+            <div class="export-card">
+                <div class="export-icon">📗</div>
+                <div>
+                    <h3>Excel Reports</h3>
+                    <p>Export reports in spreadsheet-friendly format.</p>
+                </div>
+                <button class="small-btn" data-format="XLSX">Export XLSX</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
