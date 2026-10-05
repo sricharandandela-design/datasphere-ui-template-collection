@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Analytics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">Product<span>Pro</span></div>
+
+        <nav>
+            <a class="active" href="#">📊 Overview</a>
+            <a href="#">📦 Products</a>
+            <a href="#">👥 Users</a>
+            <a href="#">📈 Performance</a>
+            <a href="#">⚙️ Settings</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="user">
+                <div class="avatar">SC</div>
+                <div>
+                    <strong>Analytics Team</strong>
+                    <small>Admin</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div>
+                <h1>Product Analytics</h1>
+                <p>Track product performance and user engagement</p>
+            </div>
+
+            <button class="date-btn" id="dateBtn">📅 Last 30 Days</button>
+        </header>
+
+        <!-- KPI CARDS -->
+        <section class="kpi-grid">
+
+            <div class="card kpi-card">
+                <div class="kpi-top">
+                    <span>Active Users</span>
+                    <span class="icon">👥</span>
+                </div>
+                <h2>24,580</h2>
+                <p class="positive">↑ 12.8% <span>vs last month</span></p>
+            </div>
+
+            <div class="card kpi-card">
+                <div class="kpi-top">
+                    <span>Product Views</span>
+                    <span class="icon">👁️</span>
+                </div>
+                <h2>86,420</h2>
+                <p class="positive">↑ 18.4% <span>vs last month</span></p>
+            </div>
+
+            <div class="card kpi-card">
+                <div class="kpi-top">
+                    <span>Conversions</span>
+                    <span class="icon">🎯</span>
+                </div>
+                <h2>6,842</h2>
+                <p class="positive">↑ 9.6% <span>vs last month</span></p>
+            </div>
+
+            <div class="card kpi-card">
+                <div class="kpi-top">
+                    <span>Conversion Rate</span>
+                    <span class="icon">📈</span>
+                </div>
+                <h2>7.92%</h2>
+                <p class="negative">↓ 1.2% <span>vs last month</span></p>
+            </div>
+
+        </section>
+
+        <!-- CHARTS -->
+        <section class="charts-grid">
+
+            <div class="card chart-card large">
+                <div class="card-header">
+                    <div>
+                        <h3>Product Engagement</h3>
+                        <p>Views and active users over time</p>
+                    </div>
+
+                    <select id="chartFilter">
+                        <option>30 Days</option>
+                        <option>7 Days</option>
+                        <option>90 Days</option>
+                    </select>
+                </div>
+
+                <div class="chart">
+                    <div class="y-axis">
+                        <span>100K</span>
+                        <span>75K</span>
+                        <span>50K</span>
+                        <span>25K</span>
+                        <span>0</span>
+                    </div>
+
+                    <div class="graph">
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+
+                        <svg viewBox="0 0 700 250" preserveAspectRatio="none">
+                            <polyline
+                                points="0,190 70,165 140,175 210,125 280,145 350,95 420,115 490,75 560,90 630,45 700,60"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="4"
+                            />
+
+                            <polyline
+                                points="0,215 70,195 140,205 210,175 280,185 350,155 420,165 490,135 560,145 630,120 700,125"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="3"
+                                stroke-dasharray="8 7"
+                                opacity="0.45"
+                            />
+                        </svg>
+
+                        <div class="x-axis">
+                            <span>1 Aug</span>
+                            <span>8 Aug</span>
+                            <span>15 Aug</span>
+                            <span>22 Aug</span>
+                            <span>30 Aug</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="legend">
+                    <span><i></i> Product Views</span>
+                    <span><i class="second"></i> Active Users</span>
+                </div>
+            </div>
+
+            <div class="card chart-card">
+                <div class="card-header">
+                    <div>
+                        <h3>Feature Usage</h3>
+                        <p>Most used product features</p>
+                    </div>
+                </div>
+
+                <div class="feature-list">
+
+                    <div class="feature">
+                        <div class="feature-info">
+                            <span>Search</span>
+                            <strong>82%</strong>
+                        </div>
+                        <div class="progress">
+                            <div style="width:82%"></div>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-info">
+                            <span>Dashboard</span>
+                            <strong>74%</strong>
+                        </div>
+                        <div class="progress">
+                            <div style="width:74%"></div>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-info">
+                            <span>Reports</span>
+                            <strong>61%</strong>
+                        </div>
+                        <div class="progress">
+                            <div style="width:61%"></div>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-info">
+                            <span>Notifications</span>
+                            <strong>48%</strong>
+                        </div>
+                        <div class="progress">
+                            <div style="width:48%"></div>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-info">
+                            <span>Settings</span>
+                            <strong>32%</strong>
+                        </div>
+                        <div class="progress">
+                            <div style="width:32%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- PRODUCT TABLE -->
+        <section class="card products-card">
+
+            <div class="card-header">
+                <div>
+                    <h3>Top Products</h3>
+                    <p>Products ranked by engagement</p>
+                </div>
+
+                <button class="view-btn" id="viewBtn">View All</button>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Views</th>
+                            <th>Users</th>
+                            <th>Conversions</th>
+                            <th>Rate</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><strong>Analytics Pro</strong></td>
+                            <td>28,420</td>
+                            <td>8,640</td>
+                            <td>2,840</td>
+                            <td>9.9%</td>
+                            <td><span class="status success">Growing</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>Dashboard Plus</strong></td>
+                            <td>21,860</td>
+                            <td>6,920</td>
+                            <td>1,920</td>
+                            <td>8.8%</td>
+                            <td><span class="status success">Growing</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>Reports Suite</strong></td>
+                            <td>18,340</td>
+                            <td>5,820</td>
+                            <td>1,240</td>
+                            <td>6.7%</td>
+                            <td><span class="status stable">Stable</span></td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>Data Explorer</strong></td>
+                            <td>12,540</td>
+                            <td>3,200</td>
+                            <td>842</td>
+                            <td>6.1%</td>
+                            <td><span class="status warning">Needs Focus</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- INSIGHTS -->
+        <section class="card insights">
+
+            <div class="card-header">
+                <div>
+                    <h3>Product Insights</h3>
+                    <p>Important observations from your product data</p>
+                </div>
+            </div>
+
+            <div class="insight-grid">
+
+                <div class="insight">
+                    <div class="insight-icon">🚀</div>
+                    <div>
+                        <h4>Engagement is growing</h4>
+                        <p>Product views increased by 18.4% compared with the previous period.</p>
+                    </div>
+                </div>
+
+                <div class="insight">
+                    <div class="insight-icon">🎯</div>
+                    <div>
+                        <h4>Search is your top feature</h4>
+                        <p>82% of active users interacted with the search feature.</p>
+                    </div>
+                </div>
+
+                <div class="insight">
+                    <div class="insight-icon">⚡</div>
+                    <div>
+                        <h4>Data Explorer needs attention</h4>
+                        <p>Its conversion rate is lower than the other major products.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

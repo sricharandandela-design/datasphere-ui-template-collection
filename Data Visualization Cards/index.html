@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">Data<span>View</span></div>
+
+        <nav>
+            <a href="#" class="active">📊 Overview</a>
+            <a href="#">📈 Analytics</a>
+            <a href="#">📦 Products</a>
+            <a href="#">👥 Users</a>
+            <a href="#">⚙️ Settings</a>
+        </nav>
+
+        <div class="profile">
+            <div class="avatar">SC</div>
+            <div>
+                <strong>Analytics Team</strong>
+                <small>Admin</small>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div>
+                <h1>Data Visualization</h1>
+                <p>Understand your business data at a glance</p>
+            </div>
+
+            <button id="refreshBtn">↻ Refresh Data</button>
+        </header>
+
+        <!-- SUMMARY CARDS -->
+
+        <section class="summary-grid">
+
+            <div class="visual-card revenue">
+                <div class="card-top">
+                    <span>Total Revenue</span>
+                    <span class="card-icon">💰</span>
+                </div>
+
+                <h2>$84,250</h2>
+
+                <div class="change positive">
+                    ↑ 14.8%
+                    <span>vs last month</span>
+                </div>
+
+                <div class="mini-chart">
+                    <span style="height:35%"></span>
+                    <span style="height:48%"></span>
+                    <span style="height:42%"></span>
+                    <span style="height:62%"></span>
+                    <span style="height:55%"></span>
+                    <span style="height:78%"></span>
+                    <span style="height:68%"></span>
+                    <span style="height:92%"></span>
+                </div>
+            </div>
+
+            <div class="visual-card users">
+                <div class="card-top">
+                    <span>Active Users</span>
+                    <span class="card-icon">👥</span>
+                </div>
+
+                <h2>24,580</h2>
+
+                <div class="change positive">
+                    ↑ 8.6%
+                    <span>vs last month</span>
+                </div>
+
+                <div class="circle-progress">
+                    <div>
+                        <strong>76%</strong>
+                        <small>Active</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="visual-card orders">
+                <div class="card-top">
+                    <span>Total Orders</span>
+                    <span class="card-icon">🛒</span>
+                </div>
+
+                <h2>8,642</h2>
+
+                <div class="change positive">
+                    ↑ 11.2%
+                    <span>vs last month</span>
+                </div>
+
+                <div class="order-bars">
+                    <span style="height:45%"></span>
+                    <span style="height:65%"></span>
+                    <span style="height:50%"></span>
+                    <span style="height:80%"></span>
+                    <span style="height:70%"></span>
+                    <span style="height:95%"></span>
+                </div>
+            </div>
+
+            <div class="visual-card conversion">
+                <div class="card-top">
+                    <span>Conversion Rate</span>
+                    <span class="card-icon">🎯</span>
+                </div>
+
+                <h2>7.92%</h2>
+
+                <div class="change negative">
+                    ↓ 1.4%
+                    <span>vs last month</span>
+                </div>
+
+                <div class="progress-ring">
+                    <div>Target<br><strong>10%</strong></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- MAIN VISUALIZATIONS -->
+
+        <section class="visual-grid">
+
+            <div class="panel large-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h3>Revenue Performance</h3>
+                        <p>Monthly revenue visualization</p>
+                    </div>
+
+                    <select id="periodSelect">
+                        <option>Monthly</option>
+                        <option>Weekly</option>
+                        <option>Yearly</option>
+                    </select>
+                </div>
+
+                <div class="bar-chart">
+
+                    <div class="bar-item">
+                        <span class="bar-value">$32K</span>
+                        <div class="bar" style="height:48%"></div>
+                        <small>Jan</small>
+                    </div>
+
+                    <div class="bar-item">
+                        <span class="bar-value">$41K</span>
+                        <div class="bar" style="height:61%"></div>
+                        <small>Feb</small>
+                    </div>
+
+                    <div class="bar-item">
+                        <span class="bar-value">$38K</span>
+                        <div class="bar" style="height:56%"></div>
+                        <small>Mar</small>
+                    </div>
+
+                    <div class="bar-item">
+                        <span class="bar-value">$52K</span>
+                        <div class="bar" style="height:73%"></div>
+                        <small>Apr</small>
+                    </div>
+
+                    <div class="bar-item">
+                        <span class="bar-value">$61K</span>
+                        <div class="bar" style="height:84%"></div>
+                        <small>May</small>
+                    </div>
+
+                    <div class="bar-item">
+                        <span class="bar-value">$68K</span>
+                        <div class="bar" style="height:94%"></div>
+                        <small>Jun</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h3>Traffic Sources</h3>
+                        <p>Where users come from</p>
+                    </div>
+                </div>
+
+                <div class="donut">
+                    <div class="donut-center">
+                        <strong>100%</strong>
+                        <small>Traffic</small>
+                    </div>
+                </div>
+
+                <div class="source-list">
+                    <div>
+                        <span><i class="dot one"></i>Organic Search</span>
+                        <strong>42%</strong>
+                    </div>
+
+                    <div>
+                        <span><i class="dot two"></i>Social Media</span>
+                        <strong>28%</strong>
+                    </div>
+
+                    <div>
+                        <span><i class="dot three"></i>Direct</span>
+                        <strong>18%</strong>
+                    </div>
+
+                    <div>
+                        <span><i class="dot four"></i>Referral</span>
+                        <strong>12%</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- VISUAL DATA CARDS -->
+
+        <section class="panel insights-panel">
+
+            <div class="panel-header">
+                <div>
+                    <h3>Performance Overview</h3>
+                    <p>Key metrics visualized for quick analysis</p>
+                </div>
+            </div>
+
+            <div class="metric-grid">
+
+                <div class="metric">
+                    <div class="metric-title">
+                        <span>Customer Satisfaction</span>
+                        <strong>92%</strong>
+                    </div>
+
+                    <div class="metric-bar">
+                        <div style="width:92%"></div>
+                    </div>
+
+                    <small>Excellent performance</small>
+                </div>
+
+                <div class="metric">
+                    <div class="metric-title">
+                        <span>Goal Completion</span>
+                        <strong>78%</strong>
+                    </div>
+
+                    <div class="metric-bar">
+                        <div style="width:78%"></div>
+                    </div>
+
+                    <small>On track to target</small>
+                </div>
+
+                <div class="metric">
+                    <div class="metric-title">
+                        <span>Retention Rate</span>
+                        <strong>68%</strong>
+                    </div>
+
+                    <div class="metric-bar">
+                        <div style="width:68%"></div>
+                    </div>
+
+                    <small>Needs improvement</small>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
